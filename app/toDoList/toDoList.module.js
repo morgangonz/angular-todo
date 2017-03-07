@@ -1,6 +1,6 @@
 // Here we declare the main module (app).
 angular
-    .module('createAHero', [
+    .module('toDoList', [
         // Here we define the modules dependencies and any "global" dependencies
         // Modules that this module depends on will inherit this modules dependencies
 
@@ -8,13 +8,13 @@ angular
         'ui.router',
 
         // Features
-        'createAHero.dashboard',
-        'createAHero.home',
-        'createAHero.story'
+        'toDoList.create',
+        //'toDoList.list',
+        //'toDoList.completed'
     ])
-    .config(appConfig);
+    .config(toDoListConfig);
 
-function appConfig($urlRouterProvider) {
+function toDoListConfig($urlRouterProvider) {
     // Here we configure the application
 
     // If the URL does not exist as a route, redirect to /
